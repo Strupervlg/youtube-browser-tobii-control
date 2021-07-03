@@ -62,8 +62,8 @@ namespace webBrowser
             this.buttonPausePlay.Text = "Pause/Play";
             this.buttonPausePlay.UseVisualStyleBackColor = true;
             this.buttonPausePlay.Click += new System.EventHandler(this.buttonPausePlay_Click);
-            this.buttonPausePlay.MouseEnter += new System.EventHandler(this.buttonPausePlay_MouseEnter);
-            this.buttonPausePlay.MouseLeave += new System.EventHandler(this.buttonPausePlay_MouseLeave);
+            this.buttonPausePlay.MouseEnter += new System.EventHandler(this.buttons_MouseEnter);
+            this.buttonPausePlay.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             // 
             // browser
             // 
@@ -114,8 +114,8 @@ namespace webBrowser
             this.buttonNext.Text = "Next";
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
-            this.buttonNext.MouseEnter += new System.EventHandler(this.buttonNext_MouseEnter);
-            this.buttonNext.MouseLeave += new System.EventHandler(this.buttonNext_MouseLeave);
+            this.buttonNext.MouseEnter += new System.EventHandler(this.buttons_MouseEnter);
+            this.buttonNext.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             // 
             // buttonBack
             // 
@@ -128,8 +128,8 @@ namespace webBrowser
             this.buttonBack.Text = "Back";
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            this.buttonBack.MouseEnter += new System.EventHandler(this.buttonBack_MouseEnter);
-            this.buttonBack.MouseLeave += new System.EventHandler(this.buttonBack_MouseLeave);
+            this.buttonBack.MouseEnter += new System.EventHandler(this.buttons_MouseEnter);
+            this.buttonBack.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             // 
             // groupBoxVolume
             // 
@@ -171,8 +171,8 @@ namespace webBrowser
             this.buttonPlusVolume.Text = "Plus";
             this.buttonPlusVolume.UseVisualStyleBackColor = true;
             this.buttonPlusVolume.Click += new System.EventHandler(this.buttonPlusVolume_Click);
-            this.buttonPlusVolume.MouseEnter += new System.EventHandler(this.buttonPlusVolume_MouseEnter);
-            this.buttonPlusVolume.MouseLeave += new System.EventHandler(this.buttonPlusVolume_MouseLeave);
+            this.buttonPlusVolume.MouseEnter += new System.EventHandler(this.buttons_MouseEnter);
+            this.buttonPlusVolume.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             // 
             // buttonMinusVolume
             // 
@@ -185,8 +185,8 @@ namespace webBrowser
             this.buttonMinusVolume.Text = "Minus";
             this.buttonMinusVolume.UseVisualStyleBackColor = true;
             this.buttonMinusVolume.Click += new System.EventHandler(this.buttonMinusVolume_Click);
-            this.buttonMinusVolume.MouseEnter += new System.EventHandler(this.buttonMinusVolume_MouseEnter);
-            this.buttonMinusVolume.MouseLeave += new System.EventHandler(this.buttonMinusVolume_MouseLeave);
+            this.buttonMinusVolume.MouseEnter += new System.EventHandler(this.buttons_MouseEnter);
+            this.buttonMinusVolume.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             // 
             // buttonMuteVolume
             // 
@@ -199,8 +199,8 @@ namespace webBrowser
             this.buttonMuteVolume.Text = "Mute";
             this.buttonMuteVolume.UseVisualStyleBackColor = true;
             this.buttonMuteVolume.Click += new System.EventHandler(this.buttonMuteVolume_Click);
-            this.buttonMuteVolume.MouseEnter += new System.EventHandler(this.buttonMuteVolume_MouseEnter);
-            this.buttonMuteVolume.MouseLeave += new System.EventHandler(this.buttonMuteVolume_MouseLeave);
+            this.buttonMuteVolume.MouseEnter += new System.EventHandler(this.buttons_MouseEnter);
+            this.buttonMuteVolume.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             // 
             // groupBoxRate
             // 
@@ -240,8 +240,8 @@ namespace webBrowser
             this.buttonPlusRate.Text = "Plus";
             this.buttonPlusRate.UseVisualStyleBackColor = true;
             this.buttonPlusRate.Click += new System.EventHandler(this.buttonPlusRate_Click);
-            this.buttonPlusRate.MouseEnter += new System.EventHandler(this.buttonPlusRate_MouseEnter);
-            this.buttonPlusRate.MouseLeave += new System.EventHandler(this.buttonPlusRate_MouseLeave);
+            this.buttonPlusRate.MouseEnter += new System.EventHandler(this.buttons_MouseEnter);
+            this.buttonPlusRate.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             // 
             // buttonMinusRate
             // 
@@ -254,8 +254,8 @@ namespace webBrowser
             this.buttonMinusRate.Text = "Minus";
             this.buttonMinusRate.UseVisualStyleBackColor = true;
             this.buttonMinusRate.Click += new System.EventHandler(this.buttonMinusRate_Click);
-            this.buttonMinusRate.MouseEnter += new System.EventHandler(this.buttonMinusRate_MouseEnter);
-            this.buttonMinusRate.MouseLeave += new System.EventHandler(this.buttonMinusRate_MouseLeave);
+            this.buttonMinusRate.MouseEnter += new System.EventHandler(this.buttons_MouseEnter);
+            this.buttonMinusRate.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             // 
             // buttonKeyboard
             // 
@@ -268,8 +268,8 @@ namespace webBrowser
             this.buttonKeyboard.Text = "Keyboard";
             this.buttonKeyboard.UseVisualStyleBackColor = true;
             this.buttonKeyboard.Click += new System.EventHandler(this.buttonKeyboard_Click);
-            this.buttonKeyboard.MouseEnter += new System.EventHandler(this.buttonKeyboard_MouseEnter);
-            this.buttonKeyboard.MouseLeave += new System.EventHandler(this.buttonKeyboard_MouseLeave);
+            this.buttonKeyboard.MouseEnter += new System.EventHandler(this.buttons_MouseEnter);
+            this.buttonKeyboard.MouseLeave += new System.EventHandler(this.buttons_MouseLeave);
             // 
             // MainWindow
             // 
