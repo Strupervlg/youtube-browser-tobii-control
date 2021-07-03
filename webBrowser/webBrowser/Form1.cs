@@ -35,77 +35,78 @@ namespace webBrowser
             string url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
             browser.Navigate(url);
 
-            imageListProgressPlayPause.Images.Add("0", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\0.jpg"));
-            imageListProgressPlayPause.Images.Add("1", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\1.jpg"));
-            imageListProgressPlayPause.Images.Add("2", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\2.jpg"));
-            imageListProgressPlayPause.Images.Add("3", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\3.jpg"));
-            imageListProgressPlayPause.Images.Add("4", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\4.jpg"));
-            imageListProgressPlayPause.Images.Add("5", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\5.jpg"));
-            imageListProgressPlayPause.Images.Add("6", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\6.jpg"));
+            imageListProgressPlayPause.Images.Add("0", Properties.Resources._0);
+            imageListProgressPlayPause.Images.Add("1", Properties.Resources._1);
+            imageListProgressPlayPause.Images.Add("2", Properties.Resources._2);
+            imageListProgressPlayPause.Images.Add("3", Properties.Resources._3);
+            imageListProgressPlayPause.Images.Add("4", Properties.Resources._4);
+            imageListProgressPlayPause.Images.Add("5", Properties.Resources._5);
+            imageListProgressPlayPause.Images.Add("6", Properties.Resources._6);
 
-            imageListProgressNext.Images.Add("0", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\0.jpg"));
-            imageListProgressNext.Images.Add("1", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\1.jpg"));
-            imageListProgressNext.Images.Add("2", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\2.jpg"));
-            imageListProgressNext.Images.Add("3", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\3.jpg"));
-            imageListProgressNext.Images.Add("4", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\4.jpg"));
-            imageListProgressNext.Images.Add("5", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\5.jpg"));
-            imageListProgressNext.Images.Add("6", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\6.jpg"));
+            imageListProgressNext.Images.Add("0", Properties.Resources._0);
+            imageListProgressNext.Images.Add("1", Properties.Resources._1);
+            imageListProgressNext.Images.Add("2", Properties.Resources._2);
+            imageListProgressNext.Images.Add("3", Properties.Resources._3);
+            imageListProgressNext.Images.Add("4", Properties.Resources._4);
+            imageListProgressNext.Images.Add("5", Properties.Resources._5);
+            imageListProgressNext.Images.Add("6", Properties.Resources._6);
 
-            imageListProgressBack.Images.Add("0", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\0.jpg"));
-            imageListProgressBack.Images.Add("1", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\1.jpg"));
-            imageListProgressBack.Images.Add("2", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\2.jpg"));
-            imageListProgressBack.Images.Add("3", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\3.jpg"));
-            imageListProgressBack.Images.Add("4", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\4.jpg"));
-            imageListProgressBack.Images.Add("5", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\5.jpg"));
-            imageListProgressBack.Images.Add("6", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\6.jpg"));
+            imageListProgressBack.Images.Add("0", Properties.Resources._0);
+            imageListProgressBack.Images.Add("1", Properties.Resources._1);
+            imageListProgressBack.Images.Add("2", Properties.Resources._2);
+            imageListProgressBack.Images.Add("3", Properties.Resources._3);
+            imageListProgressBack.Images.Add("4", Properties.Resources._4);
+            imageListProgressBack.Images.Add("5", Properties.Resources._5);
+            imageListProgressBack.Images.Add("6", Properties.Resources._6);
 
-            imageListProgressPlusVolume.Images.Add("0", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\0.jpg"));
-            imageListProgressPlusVolume.Images.Add("1", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\1.jpg"));
-            imageListProgressPlusVolume.Images.Add("2", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\2.jpg"));
-            imageListProgressPlusVolume.Images.Add("3", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\3.jpg"));
-            imageListProgressPlusVolume.Images.Add("4", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\4.jpg"));
-            imageListProgressPlusVolume.Images.Add("5", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\5.jpg"));
-            imageListProgressPlusVolume.Images.Add("6", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\6.jpg"));
+            imageListProgressPlusVolume.Images.Add("0", Properties.Resources._0);
+            imageListProgressPlusVolume.Images.Add("1", Properties.Resources._1);
+            imageListProgressPlusVolume.Images.Add("2", Properties.Resources._2);
+            imageListProgressPlusVolume.Images.Add("3", Properties.Resources._3);
+            imageListProgressPlusVolume.Images.Add("4", Properties.Resources._4);
+            imageListProgressPlusVolume.Images.Add("5", Properties.Resources._5);
+            imageListProgressPlusVolume.Images.Add("6", Properties.Resources._6);
 
-            imageListProgressMinusVolume.Images.Add("0", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\0.jpg"));
-            imageListProgressMinusVolume.Images.Add("1", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\1.jpg"));
-            imageListProgressMinusVolume.Images.Add("2", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\2.jpg"));
-            imageListProgressMinusVolume.Images.Add("3", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\3.jpg"));
-            imageListProgressMinusVolume.Images.Add("4", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\4.jpg"));
-            imageListProgressMinusVolume.Images.Add("5", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\5.jpg"));
-            imageListProgressMinusVolume.Images.Add("6", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\6.jpg"));
+            imageListProgressMinusVolume.Images.Add("0", Properties.Resources._0);
+            imageListProgressMinusVolume.Images.Add("1", Properties.Resources._1);
+            imageListProgressMinusVolume.Images.Add("2", Properties.Resources._2);
+            imageListProgressMinusVolume.Images.Add("3", Properties.Resources._3);
+            imageListProgressMinusVolume.Images.Add("4", Properties.Resources._4);
+            imageListProgressMinusVolume.Images.Add("5", Properties.Resources._5);
+            imageListProgressMinusVolume.Images.Add("6", Properties.Resources._6);
 
-            imageListProgressMuteVolume.Images.Add("0", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\0.jpg"));
-            imageListProgressMuteVolume.Images.Add("1", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\1.jpg"));
-            imageListProgressMuteVolume.Images.Add("2", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\2.jpg"));
-            imageListProgressMuteVolume.Images.Add("3", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\3.jpg"));
-            imageListProgressMuteVolume.Images.Add("4", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\4.jpg"));
-            imageListProgressMuteVolume.Images.Add("5", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\5.jpg"));
-            imageListProgressMuteVolume.Images.Add("6", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\6.jpg"));
+            imageListProgressMuteVolume.Images.Add("0", Properties.Resources._0);
+            imageListProgressMuteVolume.Images.Add("1", Properties.Resources._1);
+            imageListProgressMuteVolume.Images.Add("2", Properties.Resources._2);
+            imageListProgressMuteVolume.Images.Add("3", Properties.Resources._3);
+            imageListProgressMuteVolume.Images.Add("4", Properties.Resources._4);
+            imageListProgressMuteVolume.Images.Add("5", Properties.Resources._5);
+            imageListProgressMuteVolume.Images.Add("6", Properties.Resources._6);
 
-            imageListProgressPlusRate.Images.Add("0", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\0.jpg"));
-            imageListProgressPlusRate.Images.Add("1", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\1.jpg"));
-            imageListProgressPlusRate.Images.Add("2", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\2.jpg"));
-            imageListProgressPlusRate.Images.Add("3", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\3.jpg"));
-            imageListProgressPlusRate.Images.Add("4", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\4.jpg"));
-            imageListProgressPlusRate.Images.Add("5", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\5.jpg"));
-            imageListProgressPlusRate.Images.Add("6", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\6.jpg"));
+            imageListProgressPlusRate.Images.Add("0", Properties.Resources._0);
+            imageListProgressPlusRate.Images.Add("1", Properties.Resources._1);
+            imageListProgressPlusRate.Images.Add("2", Properties.Resources._2);
+            imageListProgressPlusRate.Images.Add("3", Properties.Resources._3);
+            imageListProgressPlusRate.Images.Add("4", Properties.Resources._4);
+            imageListProgressPlusRate.Images.Add("5", Properties.Resources._5);
+            imageListProgressPlusRate.Images.Add("6", Properties.Resources._6);
 
-            imageListProgressMinusRate.Images.Add("0", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\0.jpg"));
-            imageListProgressMinusRate.Images.Add("1", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\1.jpg"));
-            imageListProgressMinusRate.Images.Add("2", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\2.jpg"));
-            imageListProgressMinusRate.Images.Add("3", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\3.jpg"));
-            imageListProgressMinusRate.Images.Add("4", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\4.jpg"));
-            imageListProgressMinusRate.Images.Add("5", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\5.jpg"));
-            imageListProgressMinusRate.Images.Add("6", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\6.jpg"));
+            imageListProgressMinusRate.Images.Add("0", Properties.Resources._0);
+            imageListProgressMinusRate.Images.Add("1", Properties.Resources._1);
+            imageListProgressMinusRate.Images.Add("2", Properties.Resources._2);
+            imageListProgressMinusRate.Images.Add("3", Properties.Resources._3);
+            imageListProgressMinusRate.Images.Add("4", Properties.Resources._4);
+            imageListProgressMinusRate.Images.Add("5", Properties.Resources._5);
+            imageListProgressMinusRate.Images.Add("6", Properties.Resources._6);
 
-            imageListProgressKeyboard.Images.Add("0", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\0.jpg"));
-            imageListProgressKeyboard.Images.Add("1", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\1.jpg"));
-            imageListProgressKeyboard.Images.Add("2", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\2.jpg"));
-            imageListProgressKeyboard.Images.Add("3", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\3.jpg"));
-            imageListProgressKeyboard.Images.Add("4", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\4.jpg"));
-            imageListProgressKeyboard.Images.Add("5", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\5.jpg"));
-            imageListProgressKeyboard.Images.Add("6", Image.FromFile("C:\\Users\\OEM\\Desktop\\progress\\6.jpg"));
+            imageListProgressKeyboard.Images.Add("0", Properties.Resources._0);
+            imageListProgressKeyboard.Images.Add("1", Properties.Resources._1);
+            imageListProgressKeyboard.Images.Add("2", Properties.Resources._2);
+            imageListProgressKeyboard.Images.Add("3", Properties.Resources._3);
+            imageListProgressKeyboard.Images.Add("4", Properties.Resources._4);
+            imageListProgressKeyboard.Images.Add("5", Properties.Resources._5);
+            imageListProgressKeyboard.Images.Add("6", Properties.Resources._6);
+            
         }
 
         private void buttonPausePlay_Click(object sender, EventArgs e)

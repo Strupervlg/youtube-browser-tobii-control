@@ -28,3 +28,13 @@ C:\Users\OEM\Desktop\webBrowser\webBrowser\obj\Debug\webBrowser.csproj.GenerateR
 C:\Users\OEM\Desktop\webBrowser\webBrowser\obj\Debug\webBrowser.csproj.CoreCompileInputs.cache
 C:\Users\OEM\Desktop\webBrowser\webBrowser\obj\Debug\webBrowser.exe
 C:\Users\OEM\Desktop\webBrowser\webBrowser\obj\Debug\webBrowser.pdb
+C:\Users\OEM\Documents\GitHub\youtube-browser-tobii-control\webBrowser\webBrowser\bin\Debug\webBrowser.exe.config
+C:\Users\OEM\Documents\GitHub\youtube-browser-tobii-control\webBrowser\webBrowser\bin\Debug\webBrowser.exe
+C:\Users\OEM\Documents\GitHub\youtube-browser-tobii-control\webBrowser\webBrowser\bin\Debug\webBrowser.pdb
+C:\Users\OEM\Documents\GitHub\youtube-browser-tobii-control\webBrowser\webBrowser\obj\Debug\webBrowser.csproj.AssemblyReference.cache
+C:\Users\OEM\Documents\GitHub\youtube-browser-tobii-control\webBrowser\webBrowser\obj\Debug\webBrowser.MainWindow.resources
+C:\Users\OEM\Documents\GitHub\youtube-browser-tobii-control\webBrowser\webBrowser\obj\Debug\webBrowser.Properties.Resources.resources
+C:\Users\OEM\Documents\GitHub\youtube-browser-tobii-control\webBrowser\webBrowser\obj\Debug\webBrowser.csproj.GenerateResource.cache
+C:\Users\OEM\Documents\GitHub\youtube-browser-tobii-control\webBrowser\webBrowser\obj\Debug\webBrowser.csproj.CoreCompileInputs.cache
+C:\Users\OEM\Documents\GitHub\youtube-browser-tobii-control\webBrowser\webBrowser\obj\Debug\webBrowser.exe
+C:\Users\OEM\Documents\GitHub\youtube-browser-tobii-control\webBrowser\webBrowser\obj\Debug\webBrowser.pdb
