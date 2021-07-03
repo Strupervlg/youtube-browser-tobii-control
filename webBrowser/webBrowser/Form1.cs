@@ -33,7 +33,8 @@ namespace webBrowser
             imageListProgressButton.Images.Add("3", Properties.Resources._3);
             imageListProgressButton.Images.Add("4", Properties.Resources._4);
             imageListProgressButton.Images.Add("5", Properties.Resources._5);
-            imageListProgressButton.Images.Add("6", Properties.Resources._6);            
+            imageListProgressButton.Images.Add("6", Properties.Resources._6);
+            
         }
 
         private void buttonPausePlay_Click(object sender, EventArgs e)
@@ -216,8 +217,7 @@ namespace webBrowser
             {
                 keyboardProc = System.Diagnostics.Process.Start("osk.exe");
                 isKeyboard = true;
-            }
-            
+            }            
         }
 
         private void setImageInButton(Button btn, ImageList imgList)
@@ -235,7 +235,6 @@ namespace webBrowser
 
         private void buttons_MouseEnter(object sender, EventArgs e)
         {
-            imageListProgressButton.ImageSize = ((Button)sender).Size;
             threadProgressBar = new Thread(new ThreadStart(delegate
             {
                 setImageInButton(((Button)sender), imageListProgressButton);

@@ -53,7 +53,8 @@ namespace webBrowser
             // 
             // buttonPausePlay
             // 
-            this.buttonPausePlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPausePlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonPausePlay.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.buttonPausePlay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonPausePlay.Location = new System.Drawing.Point(3, 3);
             this.buttonPausePlay.Name = "buttonPausePlay";
@@ -105,7 +106,7 @@ namespace webBrowser
             // 
             // buttonNext
             // 
-            this.buttonNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonNext.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonNext.Location = new System.Drawing.Point(389, 3);
             this.buttonNext.Name = "buttonNext";
@@ -119,7 +120,7 @@ namespace webBrowser
             // 
             // buttonBack
             // 
-            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonBack.Location = new System.Drawing.Point(189, 3);
             this.buttonBack.Name = "buttonBack";
@@ -162,7 +163,7 @@ namespace webBrowser
             // 
             // buttonPlusVolume
             // 
-            this.buttonPlusVolume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPlusVolume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonPlusVolume.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonPlusVolume.Location = new System.Drawing.Point(118, 3);
             this.buttonPlusVolume.Name = "buttonPlusVolume";
@@ -176,7 +177,7 @@ namespace webBrowser
             // 
             // buttonMinusVolume
             // 
-            this.buttonMinusVolume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMinusVolume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMinusVolume.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonMinusVolume.Location = new System.Drawing.Point(3, 3);
             this.buttonMinusVolume.Name = "buttonMinusVolume";
@@ -190,7 +191,7 @@ namespace webBrowser
             // 
             // buttonMuteVolume
             // 
-            this.buttonMuteVolume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMuteVolume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMuteVolume.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonMuteVolume.Location = new System.Drawing.Point(240, 3);
             this.buttonMuteVolume.Name = "buttonMuteVolume";
@@ -231,7 +232,7 @@ namespace webBrowser
             // 
             // buttonPlusRate
             // 
-            this.buttonPlusRate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonPlusRate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonPlusRate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonPlusRate.Location = new System.Drawing.Point(151, 3);
             this.buttonPlusRate.Name = "buttonPlusRate";
@@ -245,7 +246,7 @@ namespace webBrowser
             // 
             // buttonMinusRate
             // 
-            this.buttonMinusRate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonMinusRate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMinusRate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonMinusRate.Location = new System.Drawing.Point(3, 3);
             this.buttonMinusRate.Name = "buttonMinusRate";
@@ -259,7 +260,7 @@ namespace webBrowser
             // 
             // buttonKeyboard
             // 
-            this.buttonKeyboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonKeyboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonKeyboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonKeyboard.Location = new System.Drawing.Point(1259, 3);
             this.buttonKeyboard.Name = "buttonKeyboard";
