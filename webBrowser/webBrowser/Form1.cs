@@ -14,7 +14,6 @@ namespace webBrowser
 {
     public partial class MainWindow : Form
     {
-        bool isPause = false;
         bool isKeyboard = false;
 
         Thread threadProgressBar;
@@ -47,27 +46,21 @@ namespace webBrowser
 
         private void buttonPausePlay_Click(object sender, EventArgs e)
         {
-            if (isPause)
-            {
                 HtmlDocument doc = browser.Document;
                 HtmlElement head = doc.GetElementsByTagName("head")[0];
                 HtmlElement s = doc.CreateElement("script");
-                s.SetAttribute("text", "function playVideo() { document.getElementsByClassName('video-stream')[0].play(); }");
+                s.SetAttribute("text",
+                    "function pausePlayVideo() {" +
+                    "   var isPaused = document.getElementsByClassName('video-stream')[0].paused;" +
+                    "   if (isPaused) {" +
+                    "       document.getElementsByClassName('video-stream')[0].play();" +
+                    "   }" +
+                    "   else {" +
+                    "       document.getElementsByClassName('video-stream')[0].pause();" +
+                    "   }" +
+                    "}");
                 head.AppendChild(s);
-                browser.Document.InvokeScript("playVideo");
-                isPause = false;
-            }
-            else
-            {
-                HtmlDocument doc = browser.Document;
-                HtmlElement head = doc.GetElementsByTagName("head")[0];
-                HtmlElement s = doc.CreateElement("script");
-                s.SetAttribute("text", "function pauseVideo() { document.getElementsByClassName('video-stream')[0].pause(); }");
-                head.AppendChild(s);
-                browser.Document.InvokeScript("pauseVideo");
-                isPause = true;
-            }
-
+                browser.Document.InvokeScript("pausePlayVideo");
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
@@ -320,8 +313,6 @@ namespace webBrowser
                 "}, true);" +
                 "setInterval(scrollPage, 50);");
             head.AppendChild(s);
-        }
-
-        
+        }        
     }
 }
