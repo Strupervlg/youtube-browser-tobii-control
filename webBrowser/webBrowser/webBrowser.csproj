@@ -88,6 +88,7 @@
     <Content Include="resources\4.jpg" />
     <Content Include="resources\5.jpg" />
     <Content Include="resources\6.jpg" />
+    <None Include="scriptJs.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

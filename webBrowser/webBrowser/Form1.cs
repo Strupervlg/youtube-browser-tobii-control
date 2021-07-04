@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Runtime.InteropServices;
@@ -42,159 +49,46 @@ namespace webBrowser
 
         private void buttonPausePlay_Click(object sender, EventArgs e)
         {
-                HtmlDocument doc = browser.Document;
-                HtmlElement head = doc.GetElementsByTagName("head")[0];
-                HtmlElement s = doc.CreateElement("script");
-                s.SetAttribute("text",
-                    "function pausePlayVideo() {" +
-                    "   var isPaused = document.getElementsByClassName('video-stream')[0].paused;" +
-                    "   if (isPaused) {" +
-                    "       document.getElementsByClassName('video-stream')[0].play();" +
-                    "   }" +
-                    "   else {" +
-                    "       document.getElementsByClassName('video-stream')[0].pause();" +
-                    "   }" +
-                    "}");
-                head.AppendChild(s);
-                browser.Document.InvokeScript("pausePlayVideo");
+            browser.Document.InvokeScript("pausePlayVideo");
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            HtmlDocument doc = browser.Document;
-            HtmlElement head = doc.GetElementsByTagName("head")[0];
-            HtmlElement s = doc.CreateElement("script");
-            s.SetAttribute("text", "function nextInVideo() { document.getElementsByClassName('video-stream')[0].currentTime += 5; }");
-            head.AppendChild(s);
-            browser.Document.InvokeScript("nextInVideo");
+            object[] arg = { "+" };
+            browser.Document.InvokeScript("rewindVideo", arg);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            HtmlDocument doc = browser.Document;
-            HtmlElement head = doc.GetElementsByTagName("head")[0];
-            HtmlElement s = doc.CreateElement("script");
-            s.SetAttribute("text", "function backInVideo() { document.getElementsByClassName('video-stream')[0].currentTime -= 5; }");
-            head.AppendChild(s);
-            browser.Document.InvokeScript("backInVideo");
+            object[] arg = { "-" };
+            browser.Document.InvokeScript("rewindVideo", arg);
         }
 
         private void buttonPlusVolume_Click(object sender, EventArgs e)
         {
-            HtmlDocument doc = browser.Document;
-            HtmlElement head = doc.GetElementsByTagName("head")[0];
-            HtmlElement s = doc.CreateElement("script");
-            s.SetAttribute("text",
-                "    function changeVolumeInVideo(change) {" +
-                "    var currentVolume = document.getElementsByClassName('video-stream')[0].volume;" +
-                "    if(change == '+') {" +
-                "        if(currentVolume < 0.99) {" +
-                "            document.getElementsByClassName('video-stream')[0].volume += 0.1;" +
-                "        }" +
-                "        else {" +
-                "            document.getElementsByClassName('video-stream')[0].volume = 1;" +
-                "        }" +
-                "    }" +
-                "    else {" +
-                "        if(currentVolume >= 0.1) {" +
-                "            document.getElementsByClassName('video-stream')[0].volume -= 0.1;" +
-                "        }" +
-                "        else {" +
-                "            document.getElementsByClassName('video-stream')[0].volume = 0;" +
-                "        }" +
-                "    } }");
-            head.AppendChild(s);
             object[] arg = { "+" };
             browser.Document.InvokeScript("changeVolumeInVideo", arg);
         }
 
         private void buttonMinusVolume_Click(object sender, EventArgs e)
         {
-            HtmlDocument doc = browser.Document;
-            HtmlElement head = doc.GetElementsByTagName("head")[0];
-            HtmlElement s = doc.CreateElement("script");
-            s.SetAttribute("text",
-                "    function changeVolumeInVideo(change) {" +
-                "    var currentVolume = document.getElementsByClassName('video-stream')[0].volume;" +
-                "    if(change == '+') {" +
-                "        if(currentVolume < 0.99) {" +
-                "            document.getElementsByClassName('video-stream')[0].volume += 0.1;" +
-                "        }" +
-                "        else {" +
-                "            document.getElementsByClassName('video-stream')[0].volume = 1;" +
-                "        }" +
-                "    }" +
-                "    else {" +
-                "        if(currentVolume >= 0.1) {" +
-                "            document.getElementsByClassName('video-stream')[0].volume -= 0.1;" +
-                "        }" +
-                "        else {" +
-                "            document.getElementsByClassName('video-stream')[0].volume = 0;" +
-                "        }" +
-                "    } }");
-            head.AppendChild(s);
             object[] arg = { "-" };
             browser.Document.InvokeScript("changeVolumeInVideo", arg);
         }
 
         private void buttonMuteVolume_Click(object sender, EventArgs e)
         {
-            HtmlDocument doc = browser.Document;
-            HtmlElement head = doc.GetElementsByTagName("head")[0];
-            HtmlElement s = doc.CreateElement("script");
-            s.SetAttribute("text",
-                "function muteVolumeInVideo() {" +
-                "    if(document.getElementsByClassName('video-stream')[0].muted) {" +
-                "        document.getElementsByClassName('video-stream')[0].muted = false;" +
-                "    }" +
-                "    else {" +
-                "        document.getElementsByClassName('video-stream')[0].muted = true;" +
-                "    } }");
-            head.AppendChild(s);
             browser.Document.InvokeScript("muteVolumeInVideo");
         }
 
         private void buttonPlusRate_Click(object sender, EventArgs e)
         {
-            HtmlDocument doc = browser.Document;
-            HtmlElement head = doc.GetElementsByTagName("head")[0];
-            HtmlElement s = doc.CreateElement("script");
-            s.SetAttribute("text",
-                "function changeRateInVideo(change) {" +
-                "    var rate = document.getElementsByClassName('video-stream')[0].playbackRate;" +
-                "    if(change == '+') {" +
-                "        if(rate < 2) {" +
-                "            document.getElementsByClassName('video-stream')[0].playbackRate += 0.25;" +
-                "        }" +
-                "    }" +
-                "    else {" +
-                "        if(rate > 0.25) {" +
-                "            document.getElementsByClassName('video-stream')[0].playbackRate -= 0.25;" +
-                "        }" +
-                "    } }");
-            head.AppendChild(s);
             object[] arg = { "+" };
             browser.Document.InvokeScript("changeRateInVideo", arg);
         }
 
         private void buttonMinusRate_Click(object sender, EventArgs e)
         {
-            HtmlDocument doc = browser.Document;
-            HtmlElement head = doc.GetElementsByTagName("head")[0];
-            HtmlElement s = doc.CreateElement("script");
-            s.SetAttribute("text", "function changeRateInVideo(change) {" +
-                "    var rate = document.getElementsByClassName('video-stream')[0].playbackRate;" +
-                "    if(change == '+') {" +
-                "        if(rate < 2) {" +
-                "            document.getElementsByClassName('video-stream')[0].playbackRate += 0.25;" +
-                "        }" +
-                "    }" +
-                "    else {" +
-                "        if(rate > 0.25) {" +
-                "            document.getElementsByClassName('video-stream')[0].playbackRate -= 0.25;" +
-                "        }" +
-                "    } }");
-            head.AppendChild(s);
             object[] arg = { "-" };
             browser.Document.InvokeScript("changeRateInVideo", arg);
         }
@@ -274,40 +168,7 @@ namespace webBrowser
             HtmlDocument doc = browser.Document;
             HtmlElement head = doc.GetElementsByTagName("head")[0];
             HtmlElement s = doc.CreateElement("script");
-            s.SetAttribute("text", 
-                "var coord = {x: window.innerWidth / 2, y: window.innerHeight / 2};" +
-                "var SCROLL_AMOUNT = 10;" +
-                "var SCROLL_THRESHOLD = 50;" +
-                "function getPosition(e) {" +
-                "   var x = y = 0;" +
-                "   if (!e) {" +
-                "      var e = window.event;" +
-                "   }" +
-                "   if (e.pageX || e.pageY) {" +
-                "       x = e.pageX;" +
-                "       y = e.pageY;" +
-                "   }" +
-                "   else if (e.clientX || e.clientY) {" +
-                "       x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;" +
-                "       y = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;" +
-                "   }" +
-                "   return { x: x, y: y };" +
-                "   }" +
-                "function scrollPage() {" +
-                "   var pageTop = window.pageYOffset;" +
-                "   if (coord.y >= pageTop + window.innerHeight - SCROLL_THRESHOLD) {" +
-                "       window.scrollBy(0, SCROLL_AMOUNT);" +
-                "       coord.y += SCROLL_AMOUNT;" +
-                "   }" +
-                "   else if (coord.y <= pageTop + SCROLL_THRESHOLD) {" +
-                "       window.scrollBy(0, -SCROLL_AMOUNT);" +
-                "       coord.y -= SCROLL_AMOUNT;" +
-                "   } " +
-                "}" +
-                "addEventListener('mousemove', function(e) {" +
-                "   coord = getPosition(e);" +
-                "}, true);" +
-                "setInterval(scrollPage, 50);");
+            s.SetAttribute("text", Properties.Resources.scriptJs);
             head.AppendChild(s);
         }        
     }

@@ -129,5 +129,28 @@ namespace webBrowser.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на var coord = {x: window.innerWidth / 2, y: window.innerHeight / 2};
+        ///var SCROLL_AMOUNT = 10;
+        ///var SCROLL_THRESHOLD = 50;
+        ///function getPosition(e) {
+        ///    var x = y = 0;
+        ///    if (!e) {
+        ///         var e = window.event;
+        ///        }
+        ///        if (e.pageX || e.pageY) {
+        ///            x = e.pageX;
+        ///            y = e.pageY;
+        ///        }
+        ///        else if (e.clientX || e.clientY) {
+        ///            x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+        ///            y = e.clientY + document.body.scrollTop [остаток строки не уместился]&quot;;.
+        /// </summary>
+        internal static string scriptJs {
+            get {
+                return ResourceManager.GetString("scriptJs", resourceCulture);
+            }
+        }
     }
 }

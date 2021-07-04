@@ -56,7 +56,7 @@ namespace webBrowser
             // 
             this.buttonPausePlay.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonPausePlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonPausePlay.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.buttonPausePlay.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.buttonPausePlay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonPausePlay.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
             this.buttonPausePlay.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight;
@@ -64,10 +64,9 @@ namespace webBrowser
             this.buttonPausePlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPausePlay.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPausePlay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonPausePlay.Location = new System.Drawing.Point(7, 7);
-            this.buttonPausePlay.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonPausePlay.Location = new System.Drawing.Point(6, 6);
             this.buttonPausePlay.Name = "buttonPausePlay";
-            this.buttonPausePlay.Size = new System.Drawing.Size(236, 75);
+            this.buttonPausePlay.Size = new System.Drawing.Size(176, 61);
             this.buttonPausePlay.TabIndex = 1;
             this.buttonPausePlay.Text = "PLAY | PAUSE";
             this.buttonPausePlay.UseVisualStyleBackColor = false;
@@ -79,12 +78,12 @@ namespace webBrowser
             // 
             this.mainTableLayoutPanel.SetColumnSpan(this.browser, 7);
             this.browser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.browser.Location = new System.Drawing.Point(3, 89);
+            this.browser.Location = new System.Drawing.Point(3, 73);
             this.browser.Margin = new System.Windows.Forms.Padding(0);
-            this.browser.MinimumSize = new System.Drawing.Size(27, 25);
+            this.browser.MinimumSize = new System.Drawing.Size(20, 20);
             this.browser.Name = "browser";
             this.browser.ScrollBarsEnabled = false;
-            this.browser.Size = new System.Drawing.Size(1918, 731);
+            this.browser.Size = new System.Drawing.Size(1437, 593);
             this.browser.TabIndex = 0;
             this.browser.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.browser_DocumentCompleted);
             // 
@@ -111,12 +110,11 @@ namespace webBrowser
             this.mainTableLayoutPanel.Controls.Add(this.buttonClickMouse, 6, 0);
             this.mainTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainTableLayoutPanel.Margin = new System.Windows.Forms.Padding(4);
             this.mainTableLayoutPanel.Name = "mainTableLayoutPanel";
             this.mainTableLayoutPanel.RowCount = 2;
             this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.20656F));
             this.mainTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.79344F));
-            this.mainTableLayoutPanel.Size = new System.Drawing.Size(1924, 823);
+            this.mainTableLayoutPanel.Size = new System.Drawing.Size(1443, 669);
             this.mainTableLayoutPanel.TabIndex = 0;
             // 
             // buttonNext
@@ -130,10 +128,9 @@ namespace webBrowser
             this.buttonNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNext.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonNext.Location = new System.Drawing.Point(501, 7);
-            this.buttonNext.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonNext.Location = new System.Drawing.Point(376, 6);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(236, 75);
+            this.buttonNext.Size = new System.Drawing.Size(176, 61);
             this.buttonNext.TabIndex = 1;
             this.buttonNext.Text = "NEXT";
             this.buttonNext.UseVisualStyleBackColor = false;
@@ -152,10 +149,9 @@ namespace webBrowser
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonBack.Location = new System.Drawing.Point(254, 7);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBack.Location = new System.Drawing.Point(191, 6);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(236, 75);
+            this.buttonBack.Size = new System.Drawing.Size(176, 61);
             this.buttonBack.TabIndex = 2;
             this.buttonBack.Text = "BACK";
             this.buttonBack.UseVisualStyleBackColor = false;
@@ -172,11 +168,9 @@ namespace webBrowser
             this.groupBoxVolume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBoxVolume.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxVolume.ForeColor = System.Drawing.Color.Black;
-            this.groupBoxVolume.Location = new System.Drawing.Point(748, 7);
-            this.groupBoxVolume.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxVolume.Location = new System.Drawing.Point(561, 6);
             this.groupBoxVolume.Name = "groupBoxVolume";
-            this.groupBoxVolume.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxVolume.Size = new System.Drawing.Size(400, 75);
+            this.groupBoxVolume.Size = new System.Drawing.Size(299, 61);
             this.groupBoxVolume.TabIndex = 3;
             this.groupBoxVolume.TabStop = false;
             this.groupBoxVolume.Text = "VOLUME";
@@ -191,12 +185,11 @@ namespace webBrowser
             this.tableLayoutPanelVolume.Controls.Add(this.buttonMinusVolume, 0, 0);
             this.tableLayoutPanelVolume.Controls.Add(this.buttonMuteVolume, 2, 0);
             this.tableLayoutPanelVolume.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelVolume.Location = new System.Drawing.Point(4, 20);
-            this.tableLayoutPanelVolume.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanelVolume.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanelVolume.Name = "tableLayoutPanelVolume";
             this.tableLayoutPanelVolume.RowCount = 1;
             this.tableLayoutPanelVolume.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelVolume.Size = new System.Drawing.Size(392, 51);
+            this.tableLayoutPanelVolume.Size = new System.Drawing.Size(293, 42);
             this.tableLayoutPanelVolume.TabIndex = 0;
             // 
             // buttonPlusVolume
@@ -210,10 +203,9 @@ namespace webBrowser
             this.buttonPlusVolume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPlusVolume.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPlusVolume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonPlusVolume.Location = new System.Drawing.Point(134, 4);
-            this.buttonPlusVolume.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonPlusVolume.Location = new System.Drawing.Point(100, 3);
             this.buttonPlusVolume.Name = "buttonPlusVolume";
-            this.buttonPlusVolume.Size = new System.Drawing.Size(122, 43);
+            this.buttonPlusVolume.Size = new System.Drawing.Size(91, 36);
             this.buttonPlusVolume.TabIndex = 0;
             this.buttonPlusVolume.Text = "PLUS";
             this.buttonPlusVolume.UseVisualStyleBackColor = false;
@@ -232,10 +224,9 @@ namespace webBrowser
             this.buttonMinusVolume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinusVolume.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonMinusVolume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonMinusVolume.Location = new System.Drawing.Point(4, 4);
-            this.buttonMinusVolume.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMinusVolume.Location = new System.Drawing.Point(3, 3);
             this.buttonMinusVolume.Name = "buttonMinusVolume";
-            this.buttonMinusVolume.Size = new System.Drawing.Size(122, 43);
+            this.buttonMinusVolume.Size = new System.Drawing.Size(91, 36);
             this.buttonMinusVolume.TabIndex = 1;
             this.buttonMinusVolume.Text = "MINUS";
             this.buttonMinusVolume.UseVisualStyleBackColor = false;
@@ -254,10 +245,9 @@ namespace webBrowser
             this.buttonMuteVolume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMuteVolume.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonMuteVolume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonMuteVolume.Location = new System.Drawing.Point(264, 4);
-            this.buttonMuteVolume.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMuteVolume.Location = new System.Drawing.Point(197, 3);
             this.buttonMuteVolume.Name = "buttonMuteVolume";
-            this.buttonMuteVolume.Size = new System.Drawing.Size(124, 43);
+            this.buttonMuteVolume.Size = new System.Drawing.Size(93, 36);
             this.buttonMuteVolume.TabIndex = 2;
             this.buttonMuteVolume.Text = "MUTE";
             this.buttonMuteVolume.UseVisualStyleBackColor = false;
@@ -274,11 +264,9 @@ namespace webBrowser
             this.groupBoxRate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBoxRate.Font = new System.Drawing.Font("Bahnschrift Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxRate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBoxRate.Location = new System.Drawing.Point(1159, 7);
-            this.groupBoxRate.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxRate.Location = new System.Drawing.Point(869, 6);
             this.groupBoxRate.Name = "groupBoxRate";
-            this.groupBoxRate.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxRate.Size = new System.Drawing.Size(297, 75);
+            this.groupBoxRate.Size = new System.Drawing.Size(222, 61);
             this.groupBoxRate.TabIndex = 4;
             this.groupBoxRate.TabStop = false;
             this.groupBoxRate.Text = "RATE";
@@ -291,13 +279,12 @@ namespace webBrowser
             this.tableLayoutPanelRate.Controls.Add(this.buttonPlusRate, 1, 0);
             this.tableLayoutPanelRate.Controls.Add(this.buttonMinusRate, 0, 0);
             this.tableLayoutPanelRate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelRate.Location = new System.Drawing.Point(4, 20);
-            this.tableLayoutPanelRate.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanelRate.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanelRate.Name = "tableLayoutPanelRate";
             this.tableLayoutPanelRate.RowCount = 1;
             this.tableLayoutPanelRate.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelRate.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tableLayoutPanelRate.Size = new System.Drawing.Size(289, 51);
+            this.tableLayoutPanelRate.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanelRate.Size = new System.Drawing.Size(216, 42);
             this.tableLayoutPanelRate.TabIndex = 0;
             // 
             // buttonPlusRate
@@ -311,10 +298,9 @@ namespace webBrowser
             this.buttonPlusRate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPlusRate.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPlusRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonPlusRate.Location = new System.Drawing.Point(148, 4);
-            this.buttonPlusRate.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonPlusRate.Location = new System.Drawing.Point(111, 3);
             this.buttonPlusRate.Name = "buttonPlusRate";
-            this.buttonPlusRate.Size = new System.Drawing.Size(137, 43);
+            this.buttonPlusRate.Size = new System.Drawing.Size(102, 36);
             this.buttonPlusRate.TabIndex = 0;
             this.buttonPlusRate.Text = "PLUS";
             this.buttonPlusRate.UseVisualStyleBackColor = false;
@@ -333,10 +319,9 @@ namespace webBrowser
             this.buttonMinusRate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMinusRate.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonMinusRate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonMinusRate.Location = new System.Drawing.Point(4, 4);
-            this.buttonMinusRate.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonMinusRate.Location = new System.Drawing.Point(3, 3);
             this.buttonMinusRate.Name = "buttonMinusRate";
-            this.buttonMinusRate.Size = new System.Drawing.Size(136, 43);
+            this.buttonMinusRate.Size = new System.Drawing.Size(102, 36);
             this.buttonMinusRate.TabIndex = 1;
             this.buttonMinusRate.Text = "MINUS";
             this.buttonMinusRate.UseVisualStyleBackColor = false;
@@ -355,10 +340,9 @@ namespace webBrowser
             this.buttonKeyboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonKeyboard.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonKeyboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonKeyboard.Location = new System.Drawing.Point(1467, 7);
-            this.buttonKeyboard.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonKeyboard.Location = new System.Drawing.Point(1100, 6);
             this.buttonKeyboard.Name = "buttonKeyboard";
-            this.buttonKeyboard.Size = new System.Drawing.Size(236, 75);
+            this.buttonKeyboard.Size = new System.Drawing.Size(176, 61);
             this.buttonKeyboard.TabIndex = 5;
             this.buttonKeyboard.Text = "KEYBOARD";
             this.buttonKeyboard.UseVisualStyleBackColor = false;
@@ -377,10 +361,9 @@ namespace webBrowser
             this.buttonClickMouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClickMouse.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonClickMouse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonClickMouse.Location = new System.Drawing.Point(1714, 7);
-            this.buttonClickMouse.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClickMouse.Location = new System.Drawing.Point(1285, 6);
             this.buttonClickMouse.Name = "buttonClickMouse";
-            this.buttonClickMouse.Size = new System.Drawing.Size(203, 75);
+            this.buttonClickMouse.Size = new System.Drawing.Size(152, 61);
             this.buttonClickMouse.TabIndex = 6;
             this.buttonClickMouse.Text = "CLICK";
             this.buttonClickMouse.UseVisualStyleBackColor = false;
@@ -390,12 +373,11 @@ namespace webBrowser
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::webBrowser.Properties.Resources._0;
-            this.ClientSize = new System.Drawing.Size(1924, 823);
+            this.ClientSize = new System.Drawing.Size(1443, 669);
             this.Controls.Add(this.mainTableLayoutPanel);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainWindow";
             this.Text = "Browser";
             this.mainTableLayoutPanel.ResumeLayout(false);
