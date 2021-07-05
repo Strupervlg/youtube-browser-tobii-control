@@ -133,7 +133,8 @@ namespace webBrowser.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на var coord = {x: window.innerWidth / 2, y: window.innerHeight / 2};
         ///var SCROLL_AMOUNT = 10;
-        ///var SCROLL_THRESHOLD = 50;
+        ///var SCROLL_HOLDY = 50;
+        ///var SCROLL_HOLDX = 80;
         ///function getPosition(e) {
         ///    var x = y = 0;
         ///    if (!e) {
@@ -145,11 +146,21 @@ namespace webBrowser.Properties {
         ///        }
         ///        else if (e.clientX || e.clientY) {
         ///            x = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-        ///            y = e.clientY + document.body.scrollTop [остаток строки не уместился]&quot;;.
+        ///            y = e.clientY + doc [остаток строки не уместился]&quot;;.
         /// </summary>
         internal static string scriptJs {
             get {
                 return ResourceManager.GetString("scriptJs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon sticker_9 {
+            get {
+                object obj = ResourceManager.GetObject("sticker_9", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }

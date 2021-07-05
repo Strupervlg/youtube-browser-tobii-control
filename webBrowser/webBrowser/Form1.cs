@@ -35,6 +35,10 @@ namespace webBrowser
         {
             InitializeComponent();
 
+            this.Icon = Properties.Resources.sticker_9;
+
+            this.Text = "YouBoob";
+
             this.WindowState = FormWindowState.Maximized;
 
             string url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
