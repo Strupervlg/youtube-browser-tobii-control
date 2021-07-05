@@ -1,6 +1,7 @@
 var coord = {x: window.innerWidth / 2, y: window.innerHeight / 2};
 var SCROLL_AMOUNT = 10;
-var SCROLL_THRESHOLD = 50;
+var SCROLL_HOLDY = 50;
+var SCROLL_HOLDX = 80;
 function getPosition(e) {
     var x = y = 0;
     if (!e) {
@@ -18,11 +19,11 @@ function getPosition(e) {
     }
     function scrollPage() {
         var pageTop = window.pageYOffset;
-        if (coord.y >= pageTop + window.innerHeight - SCROLL_THRESHOLD) {
+        if (coord.y >= pageTop + window.innerHeight - SCROLL_HOLDY && coord.x >= window.innerWidth - SCROLL_HOLDX) {
             window.scrollBy(0, SCROLL_AMOUNT);
             coord.y += SCROLL_AMOUNT;
         }
-        else if (coord.y <= pageTop + SCROLL_THRESHOLD) {
+        else if (coord.y <= pageTop + SCROLL_HOLDY && coord.x >= window.innerWidth - SCROLL_HOLDX) {
             window.scrollBy(0, -SCROLL_AMOUNT);
             coord.y -= SCROLL_AMOUNT;
         }

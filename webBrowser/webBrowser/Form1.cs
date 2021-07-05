@@ -17,6 +17,7 @@ namespace webBrowser
     public partial class MainWindow : Form
     {
         bool isKeyboard = false;
+        bool isClick = false;
 
         Thread threadProgressBar;
         System.Diagnostics.Process keyboardProc;
@@ -52,76 +53,116 @@ namespace webBrowser
 
         private void buttonPausePlay_Click(object sender, EventArgs e)
         {
-            browser.Document.InvokeScript("pausePlayVideo");
+            if(isClick)
+            {
+                browser.Document.InvokeScript("pausePlayVideo");
+                isClick = false;
+            }
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            object[] arg = { "+" };
-            browser.Document.InvokeScript("rewindVideo", arg);
+            if (isClick)
+            {
+                object[] arg = { "+" };
+                browser.Document.InvokeScript("rewindVideo", arg);
+                isClick = false;
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            object[] arg = { "-" };
-            browser.Document.InvokeScript("rewindVideo", arg);
+            if (isClick)
+            {
+                object[] arg = { "-" };
+                browser.Document.InvokeScript("rewindVideo", arg);
+                isClick = false;
+            }
         }
 
         private void buttonPlusVolume_Click(object sender, EventArgs e)
         {
-            object[] arg = { "+" };
-            browser.Document.InvokeScript("changeVolumeInVideo", arg);
+            if (isClick)
+            {
+                object[] arg = { "+" };
+                browser.Document.InvokeScript("changeVolumeInVideo", arg);
+                isClick = false;
+            }
         }
 
         private void buttonMinusVolume_Click(object sender, EventArgs e)
         {
-            object[] arg = { "-" };
-            browser.Document.InvokeScript("changeVolumeInVideo", arg);
+            if (isClick)
+            {
+                object[] arg = { "-" };
+                browser.Document.InvokeScript("changeVolumeInVideo", arg);
+                isClick = false;
+            }
         }
 
         private void buttonMuteVolume_Click(object sender, EventArgs e)
         {
-            browser.Document.InvokeScript("muteVolumeInVideo");
+            if (isClick)
+            {
+                browser.Document.InvokeScript("muteVolumeInVideo");
+                isClick = false;
+            }
         }
 
         private void buttonPlusRate_Click(object sender, EventArgs e)
         {
-            object[] arg = { "+" };
-            browser.Document.InvokeScript("changeRateInVideo", arg);
+            if (isClick)
+            {
+                object[] arg = { "+" };
+                browser.Document.InvokeScript("changeRateInVideo", arg);
+                isClick = false;
+            }
         }
 
         private void buttonMinusRate_Click(object sender, EventArgs e)
         {
-            object[] arg = { "-" };
-            browser.Document.InvokeScript("changeRateInVideo", arg);
+            if (isClick)
+            {
+                object[] arg = { "-" };
+                browser.Document.InvokeScript("changeRateInVideo", arg);
+                isClick = false;
+            }
         }
 
         private void buttonKeyboard_Click(object sender, EventArgs e)
         {
-            //запускаем клавиатуру в отдельном потоке
-            if(isKeyboard)
+            if (isClick)
             {
-                if(!keyboardProc.HasExited)
+                //запускаем клавиатуру в отдельном потоке
+                if (isKeyboard)
                 {
-                    keyboardProc.Kill();
-                }                
-                isKeyboard = false;
+                    if (!keyboardProc.HasExited)
+                    {
+                        keyboardProc.Kill();
+                    }
+                    isKeyboard = false;
+                }
+                else
+                {
+                    keyboardProc = System.Diagnostics.Process.Start(@"C:\Windows\WinSxS\amd64_microsoft-windows-osk_31bf3856ad364e35_10.0.19041.1_none_60ade0eff94c37fc\osk.exe");
+                    isKeyboard = true;
+                }
+                isClick = false;
             }
-            else
-            {
-                keyboardProc = System.Diagnostics.Process.Start("osk.exe");
-                isKeyboard = true;
-            }            
         }
 
         private void buttonClickMouse_Click(object sender, EventArgs e)
         {
-            Thread threadClickMouse = new Thread(new ThreadStart(delegate
+            if (isClick)
+            {
+                Thread threadClickMouse = new Thread(new ThreadStart(delegate
             {
                 Thread.Sleep(2000);
                 DoMouseClick();
             }));
-            threadClickMouse.Start();
+                threadClickMouse.Start();
+                isClick = false;
+            }
         }
 
         public void DoMouseClick()
@@ -137,7 +178,7 @@ namespace webBrowser
             ImageList cpyImgList = imgList;
             for (int i = 0; i < 7; ++i)
             {
-                Thread.Sleep(100);
+                Thread.Sleep(200);
                 this.Invoke(new ThreadStart(delegate
                 {
                     btn.BackgroundImage = cpyImgList.Images[i];
@@ -147,11 +188,15 @@ namespace webBrowser
 
         private void buttons_MouseEnter(object sender, EventArgs e)
         {
+            if (threadProgressBar != null && threadProgressBar.ThreadState == ThreadState.Running)
+                threadProgressBar.Abort();
             threadProgressBar = new Thread(new ThreadStart(delegate
             {
+                Thread.Sleep(300);
                 setImageInButton(((Button)sender), imageListProgressButton);
                 Invoke((MethodInvoker)delegate
                 {
+                    isClick = true;
                     ((Button)sender).PerformClick();
                 });
                 Thread.Sleep(200);
