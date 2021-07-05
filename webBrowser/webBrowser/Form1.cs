@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Runtime.InteropServices;
+using Tobii.Interaction;
+using Gma.System.MouseKeyHook;
 
 namespace webBrowser
 {
@@ -44,7 +46,8 @@ namespace webBrowser
             imageListProgressButton.Images.Add("4", Properties.Resources._4);
             imageListProgressButton.Images.Add("5", Properties.Resources._5);
             imageListProgressButton.Images.Add("6", Properties.Resources._6);
-            
+
+           
         }
 
         private void buttonPausePlay_Click(object sender, EventArgs e)
