@@ -230,7 +230,6 @@ namespace webBrowser
             if (keyCombinationIsPressed && e.Control && e.KeyCode == Keys.D)
             {
                 EyeController.toggleGazeMouse(null, null);
-                Console.WriteLine(EyeController.enableGazeMouseControl);
             }
             keyCombinationIsPressed = !keyCombinationIsPressed;
         }
