@@ -18,6 +18,7 @@ namespace webBrowser
     {
         bool isKeyboard = false;
         bool isClick = false;
+        bool keyCombinationIsPressed = false;
 
         Thread threadProgressBar;
         System.Diagnostics.Process keyboardProc;
@@ -222,6 +223,16 @@ namespace webBrowser
             HtmlElement s = doc.CreateElement("script");
             s.SetAttribute("text", Properties.Resources.scriptJs);
             head.AppendChild(s);
-        }        
+        }
+
+        private void browser_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (keyCombinationIsPressed && e.Control && e.KeyCode == Keys.D)
+            {
+                EyeController.toggleGazeMouse(null, null);
+                Console.WriteLine(EyeController.enableGazeMouseControl);
+            }
+            keyCombinationIsPressed = !keyCombinationIsPressed;
+        }
     }
 }
