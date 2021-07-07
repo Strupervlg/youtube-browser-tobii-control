@@ -21,8 +21,6 @@ namespace webBrowser
             //create the data stream
             var gazePointDataStream = host.Streams.CreateGazePointDataStream(Tobii.Interaction.Framework.GazePointDataMode.LightlyFiltered);
 
-            EyeController.subscribeGlobalKeyHook();
-
             //handle the 'toggle gaze control' button event
             form.Activated += new System.EventHandler(EyeController.toggleGazeMouse);
 

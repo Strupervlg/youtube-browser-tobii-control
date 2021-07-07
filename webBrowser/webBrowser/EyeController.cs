@@ -17,40 +17,9 @@ namespace webBrowser
         private static Point prevPos;
         private static bool hasPrevPos;
         private static double alpha = 0.085d;
-        private static int currentFilter;
-        private static IKeyboardMouseEvents m_GlobalHook;
         GazePointDataStream gazePointDataStream;
 
         public static bool enableGazeMouseControl { get; set; } = false;
-        private static void GlobalHookKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Space)
-            {
-                InputSimulator inputSimulator = new InputSimulator(); //!!!!!
-                inputSimulator.Mouse.LeftButtonDown();
-            }
-        }
-        private static void GlobalHookKeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Space)
-            {
-                InputSimulator inputSimulator = new InputSimulator(); //!!!!!
-                inputSimulator.Mouse.LeftButtonUp();
-            }
-        }
-        public static void subscribeGlobalKeyHook()
-        {
-            m_GlobalHook = Hook.GlobalEvents();
-            m_GlobalHook.KeyDown += GlobalHookKeyDown;
-            m_GlobalHook.KeyUp += GlobalHookKeyUp;
-        }
-
-        private static void unsubscribeGlobalKeyHook()
-        {
-            m_GlobalHook.KeyDown -= GlobalHookKeyDown;
-            m_GlobalHook.KeyUp -= GlobalHookKeyUp;
-            m_GlobalHook.Dispose();
-        }
 
         //Applies a filter to the point based on currently selected setting
         private static Point SmoothFilter(Point point)
