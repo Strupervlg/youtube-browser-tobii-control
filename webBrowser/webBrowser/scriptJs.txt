@@ -44,10 +44,11 @@ function pausePlayVideo() {
 }
 
 function rewindVideo(change) {
-    if(change == '+') {
+    let vid = document.getElementsByClassName('video-stream')[0].currentSrc;
+    if(vid != '' && change == '+') {
         document.getElementsByClassName('video-stream')[0].currentTime += 5;
     }
-    else {
+    else if(vid != '' && change == '-') {
         document.getElementsByClassName('video-stream')[0].currentTime -= 5;
     }
 }
