@@ -14,14 +14,18 @@ namespace webBrowser
 {
     class EyeController
     {
-        private static Point prevPos;
-        private static bool hasPrevPos;
-        private static double alpha = 0.085d;
-        GazePointDataStream gazePointDataStream;
+        private static Point prevPos; //Предыдущая позиция взгляда
+        private static bool hasPrevPos; //Флаг, что предыдущая позиция взгляда существует
+        private static double alpha = 0.085d; 
+        GazePointDataStream gazePointDataStream; //Поток данных с eye Tracker
 
-        public static bool enableGazeMouseControl { get; set; } = false;
+        public static bool enableGazeMouseControl { get; set; } = false; //Флаг включения движения мыши с помощью eye Tracker
 
-        //Applies a filter to the point based on currently selected setting
+        /// <summary>
+        /// Корректирует позицию взгляда
+        /// </summary>
+        /// <param name="point"> Позиция взгляда </param>
+        /// <returns> Скорректированная позиция взгляда </returns>
         private static Point SmoothFilter(Point point)
         {
             Point filteredPoint = point;
@@ -40,11 +44,21 @@ namespace webBrowser
             return filteredPoint;
         }
 
-        //Moves the mouse cursor and applies filter based on the currently selected setting
+        /// <summary>
+        /// Корректирует положение взгляда и перемещает курсор мыши
+        /// </summary>
+        /// <param name="x"> Координата взгляда по X </param>
+        /// <param name="y"> Координата взгляда по Y </param>
         public static void moveCursor(int x, int y)
         {
             Cursor.Position = SmoothFilter(new Point(x, y));
         }
+
+        /// <summary>
+        /// Включает(Выключает) движение мыши с помощью eye Tracker
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public static void toggleGazeMouse(object sender, EventArgs e)
         {
             enableGazeMouseControl = !enableGazeMouseControl;

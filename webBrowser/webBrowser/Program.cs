@@ -14,16 +14,17 @@ namespace webBrowser
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            MainWindow form = new MainWindow();
+            MainWindow form = new MainWindow(); //Создание окна
 
-            var host = new Host();
+            var host = new Host(); //Подключение к eye Tracker
 
-            //create the data stream
+            //Создание потока данных с eye Tracker
             var gazePointDataStream = host.Streams.CreateGazePointDataStream(Tobii.Interaction.Framework.GazePointDataMode.LightlyFiltered);
 
-            //handle the 'toggle gaze control' button event
+            //Включение движения мыши с помощью eye Tracker при активации окна
             form.Activated += new System.EventHandler(EyeController.toggleGazeMouse);
 
+            //Получение координат взгляда с eye Tracker и отрисовка в заданной позиции курсора
             gazePointDataStream.GazePoint((x, y, _) =>
             {
                 if (EyeController.enableGazeMouseControl)
@@ -32,6 +33,7 @@ namespace webBrowser
                 }
             });
 
+            //Запуск окна
             Application.Run(form);
         }
     }
